@@ -6,6 +6,7 @@ authors = ["claire"]
 
 [tool.poetry.dependencies]
 python = "^3.8"
+elasticsearch = "^8.2.3"
 
 [tool.poetry.dev-dependencies]
 
