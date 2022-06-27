@@ -7,7 +7,7 @@ client = client = Elasticsearch(
 
 s = Search(using=client, index="question") \
     .filter("term", category="search") \
-    .query("match", title="Je n'arrete pas de tousser")   \
+    .query("match", title="J'ai mal à l'os du bas")   \
     .exclude("match", description="beta")
 
 s.aggs.bucket('per_tag', 'terms', field='tags') \
