@@ -6,9 +6,10 @@ client = client = Elasticsearch(
 )
 
 s = Search(using=client, index="question") \
-    .filter("term", category="search") \
-    .query("match", title="Je n'arrete pas de tousser")   \
-    .exclude("match", description="beta")
+    .query("match", title="J'ai mal à l'os du bas")
+    #.filter("term", category="search") \
+    #.query("match", title="Je n'arrete pas de tousser")   \
+    #.exclude("match", description="beta")
 
 s.aggs.bucket('per_tag', 'terms', field='tags') \
     .metric('max_lines', 'max', field='lines')
@@ -20,3 +21,4 @@ for hit in response:
 
 for tag in response.aggregations.per_tag.buckets:
     print(tag.key, tag.max_lines.value)
+
