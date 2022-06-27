@@ -33,7 +33,7 @@ question = Question(meta={'id': 1}, title='Je tousse, est-ce normal ?', tags=["t
 # question.published_from = datetime.now()
 question.save()
 
-question = Question.get(id=42)
+question = Question.get(id=1)
 print(question.title())
 
 # Display cluster health
