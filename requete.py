@@ -2,7 +2,7 @@ from elasticsearch import Elasticsearch
 from elasticsearch_dsl import Search
 
 client = client = Elasticsearch(
-    "https://localhost:9200"
+    "http://localhost:9200"
 )
 
 s = Search(using=client, index="question") \
