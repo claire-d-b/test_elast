@@ -18,7 +18,7 @@ class Question(Document):
         }
 
     def save(self, ** kwargs):
-        self.lines = len(self.body.split())
+        # self.lines = len(self.body.split())
         return super(Question, self).save(** kwargs)
 
     # def is_published(self):
