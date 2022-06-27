@@ -24,14 +24,20 @@ class Question(Document):
     # def is_published(self):
     #     return datetime.now() > self.published_from
 
-# create the mappings in elasticsearch
-Question.init()
+# # create the mappings in elasticsearch
+# Question.init()
 
 # create and save and article
-question = Question(meta={'id': 1}, title='Je tousse, est-ce normal ?', tags=["toux", "gorge"])
+# question = Question(meta={'id': 1}, title='Je tousse, est-ce normal ?', tags=["toux", "gorge"])
 # question.body = ''' looong text '''
 # question.published_from = datetime.now()
-question.save()
+# question.save()
+
+# create and save and article
+question2 = Question(meta={'id': 2}, title="J'ai mal à la cheville", tags=["os", "pied", "cheville"])
+# question.body = ''' looong text '''
+# question.published_from = datetime.now()
+question2.save()
 
 question = Question.get(id=1)
 print(question.title)
