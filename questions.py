@@ -34,7 +34,7 @@ question = Question(meta={'id': 1}, title='Je tousse, est-ce normal ?', tags=["t
 question.save()
 
 question = Question.get(id=1)
-print(question.title())
+print(question.title)
 
 # Display cluster health
 print(connections.get_connection().cluster.health())
